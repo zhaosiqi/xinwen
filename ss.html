@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		 body,html{
+      	     width: 100%;height:100%;padding: 0;
+      	     margin: 0;
+         }
+        *{
+      	    padding: 0;
+      	    margin: 0;
+      	    box-sizing: border-box;
+        }
+			.box{
+				width: 100%;
+				height:100%;
+				background: #333333;
+				position: relative;
+			}
+				nav{
+		width: 100%;
+		height:1.2rem;
+		background: #333;
+		position:fixed;
+		bottom:0;
+		left: 0;
+	}
+	nav .nav{
+		float: left;
+		width: 20%;
+		height:100%;
+		position: relative;
+	}
+	/*.nav:nth-child(1){
+		position: relative;
+	}*/
+	.shouye{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/1.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.fenlei{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/2.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.sousuo{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/3.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.faxian{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/4.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.yonghu{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/5.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.lol{
+		width:100%;
+		height:1rem;
+		position: absolute;
+		top: 1.5rem;
+	}
+	.loll{
+		width: 80%;
+		height:80%;
+		margin-left: 0.8rem;
+	}
+	.loll input{
+		width: 100%;
+		height: 100%;
+		padding-left: 0.4rem;
+		margin: 0;
+	    background: #333333;
+        border: 1px solid #00FFFF;
+        border-radius: 1.3rem;
+        font-size: 0.3rem;
+        font-weight: bold;
+        color: #00FFFF;
+        outline: none;
+	}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!--标题栏-->
+				<nav>
+			<div class="nav">
+				<a href="index.html">
+					<div class="shouye"></div>
+				</a>
+			</div>
+			<div class="nav">
+				<a href="fenlei.html">
+					<div class="fenlei"></div>
+				</a></div>
+			<div class="nav">
+				<a href="ss.html">
+					<div class="sousuo"></div>
+				</a></div>
+			<div class="nav">
+				<a href="">
+					<div class="faxian"></div>
+				</a>
+			</div>
+			<div class="nav">
+				<a href="">
+					<div class="yonghu"></div>
+				</a>
+			</div>
+		</nav>
+			<!--标题栏-->
+			<div class="lol">
+			   <div class="loll"><input type="text" placeholder="搜索"/></div>
+			</div>
+			
+		</div>
+	</body>
+	<script>
+		function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y"); 
+   }
+	</script>
+</html>
