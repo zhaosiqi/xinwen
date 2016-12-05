@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<style>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+	<style>
 		 body,html{
       	     width: 100%;height:100%;padding: 0;
       	     margin: 0;
@@ -13,20 +19,21 @@
       	    margin: 0;
       	    box-sizing: border-box;
         }
-			.box{
-				width: 100%;
-				height:100%;
-				background: #333333;
-				position: relative;
-			}
-				nav{
-		width: 100%;
-		height:1.2rem;
-		background: #333;
-		position:fixed;
-		bottom:0;
-		left: 0;
-	}
+		.box{
+			width: 100%;
+			height:100%;
+			background:#333333;
+			background-size: 100% 100%;
+			position: relative;
+		}
+		nav{
+		   width: 100%;
+		   height:1.2rem;
+		   background: #333;
+		   position:fixed;
+		   bottom:0;
+		   left: 0;
+	    }
 	nav .nav{
 		float: left;
 		width: 20%;
@@ -96,79 +103,26 @@
 		background:url(img/5.svg)no-repeat;
 		background-size: 100% 100%;
 	}
-	.lol{
-		width:100%;
-		height:1rem;
+	.top{
+		width: 100%;
+		height:3.13rem;
+		background: url(img/bg3.png);
+		background-size: 100% 100%;
+	}
+	.bottom{
+		width: 100%;
+		height:3.54rem;
+		background:url(img/bg2.png);
+		background-size: 100% 100%;
 		position: absolute;
-		top: 1.5rem;
+		bottom: 1.2rem;
 	}
-	.loll{
-		width: 80%;
-		height:80%;
-		margin-left: 0.8rem;
-	}
-	.loll input{
-		width: 100%;
-		height: 100%;
-		padding-left: 0.4rem;
-		margin: 0;
-	    background: #333333;
-        border: 1px solid #00FFFF;
-        border-radius: 1.3rem;
-        font-size: 0.3rem;
-        font-weight: bold;
-        color: #00FFFF;
-        outline: none;
-	}
-	.xihuan{
-		width: 100%;
-		height:5rem;
-	    position: absolute;
-	    top:4.5rem;
-	}
-	.xihuan ul{
-		width: 100%;
-		height:100%;
-	}
-	.xihuan li{
-		width: 100%;
-		height:1rem;
-		margin-top: 0.2rem;
-	}
-	.xihuan li a{
-		color: #00FFFF;
-		font-size:0.3rem;
-		text-decoration: none;
-		padding-left:0.3rem;
-		overflow: hidden;
-		padding-left:0.6rem;
-	}
-	.title{
-		width: 100%;
-		height:1rem;
-		position: absolute;
-		top:3.5rem;
-	}
-	.titleleft{
-		font-size: 0.4rem;
-		color: #00FFFF;
-		float: left;
-		line-height: 1rem;
-		margin-left: 0.2rem;
-	}
-	.titleright{
-		font-size: 0.4rem;
-		color: #00ffff;
-		float: right;
-		line-height: 1rem;
-		margin-right: 0.2rem;
-	}
-		</style>
-	</head>
-	<body>
-		<div class="box">
-			<!--标题栏-->
-				<nav>
+	</style>
+</head>
+<body>
+	<div class="box">
+		<!--标题栏-->
+		<nav>
 			<div class="nav">
 				<a href="index.html">
 					<div class="shouye"></div>
@@ -193,35 +147,17 @@
 				</a>
 			</div>
 		</nav>
-			<!--标题栏-->
-			<div class="lol">
-			   <div class="loll"><input type="text" placeholder="搜索"/></div>
-			</div>
-			<div class="title">
-				<div class="titleleft">推荐</div>
-				<div class="titleright">换一批</div>
-			</div>
-			<div class="xihuan">
-				<ul>
-					<li>
-						<a href="">4名涉“港独”议员面临资格被撤 或有刑罚</a>
-					</li>
-					<li>
-						<a href="">菲律宾总统：特朗普夸我禁毒战争做得对</a>
-					</li>
-					<li>
-						<a href="">小伙495倍投中体彩216万不交税</a>
-					</li>
-					<li>
-						<a href="">男子追砸运钞车被击毙完整视频首公开</a>
-					</li>
-				</ul>
-			</div>
-			
-		</div>
-	</body>
-	<script>
-		function resize (originSize,type){
+		<!--标题栏-->
+		<!--背景栏-->
+		<div class="top"></div>
+		<div class="bottom"></div>
+		<!--背景栏-->
+		<!--正文栏-->
+		<!--正文栏-->
+	</div>
+</body>
+<script type="text/javascript">
+	function resize (originSize,type){
         var type=type ||"x" ;
         var widths=document.documentElement.clientWidth;
         var heights=document.documentElement.clientHeight;
@@ -230,12 +166,11 @@
         }else if(type=="y"){
             var scale=heights/originSize*100;
         }
-        
         document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
 
     }
   window.onload=function(){
          resize(1334,"y"); 
-   }
-	</script>
+  }       
+</script>
 </html>
