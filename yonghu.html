@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	body,html{
+      	width: 100%;height:100%;padding: 0;
+      	margin: 0;
+    }
+    *{
+      	padding: 0;
+      	margin: 0;
+      	box-sizing: border-box;
+    }
+	.box{
+		width:100%;
+		height: auto;
+		position:relative;
+	}
+	nav{
+		width: 100%;
+		height:1.2rem;
+		background: #333;
+		position:fixed;
+		bottom:0;
+		left: 0;
+	}
+	nav .nav{
+		float: left;
+		width: 20%;
+		height:100%;
+		position: relative;
+	}
+	/*.nav:nth-child(1){
+		position: relative;
+	}*/
+	.shouye{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/1.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.fenlei{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/2.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.sousuo{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/3.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.faxian{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/4.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.yonghu{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/5.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.header{
+		width:100%;
+		height:4rem;
+		background:url(img/shanghai.jpg);
+		background-size: 100% 100%;
+	}
+	.zezao{
+		width: 100%;
+		height:4rem;
+		background:#333;
+		position: absolute;
+	    left:0;
+	    top:0;
+	    opacity: 0.6;
+	}
+	.touxiang{
+		width: 1.8rem;
+		height:1.8rem;
+		background: url(img/ren.png);
+		background-size: 100% 100%;
+		position: absolute;
+		top: 0.6rem;
+		left:0rem;
+		right:0rem;
+		margin: auto;
+		border-radius: 100%;
+	}
+	.user{
+		width: 4rem;
+		height: 0.6rem;
+		position: absolute;
+		top:3rem;
+		left:0;
+		right:0;
+		margin: auto;
+		text-align: center;
+	}
+	.user a{
+		width: 100%;
+		height:100%;
+		display: block;
+		font-size: 0.35rem;
+		color: #00ffff;
+		text-align: center;
+		line-height: 0.6rem;
+		text-decoration: none;
+	}
+	.setting{
+		width: 100%;
+		height:10rem;
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<!--底部栏-->
+		<nav>
+			<div class="nav">
+				<a href="shouye.html">
+					<div class="shouye"></div>
+				</a>
+			</div>
+			<div class="nav">
+				<a href="fenlei.html">
+					<div class="fenlei"></div>
+				</a></div>
+			<div class="nav">
+				<a href="ss.html">
+					<div class="sousuo"></div>
+				</a></div>
+			<div class="nav">
+				<a href="faxian.html">
+					<div class="faxian"></div>
+				</a>
+			</div>
+			<div class="nav">
+				<a href="guide.html">
+					<div class="yonghu"></div>
+				</a>
+			</div>
+		</nav>
+		<!--底部栏-->
+		<!--用户栏-->
+		<div class="header"></div>
+		<div class="zezao"></div>
+		<div class="touxiang"></div>
+		<div class="user"><a href="">请登录</a></div>
+		<div class="setting">
+			<div class="jiti1"><a href="">
+					<div class="gr1"></div>
+					<p></p>
+					<div class="gd"></div>
+				</a></div>
+			<div class="jiti2"><a href="">
+					<div class="gr2"></div>
+					<p></p>
+					<div class="gd"></div>
+				</a></div>
+			<div class="jiti3"><a href="">
+					<div class="gr3"></div>
+					<p></p>
+					<div class="gd"></div>
+				</a></div>
+			<div class="jiti4"><a href="">
+					<div class="gr4"></div>
+					<p></p>
+					<div class="gd"></div>
+				</a></div>
+			<div class="jiti5"><a href="">
+					<div class="gr5"></div>
+					<p></p>
+					<div class="gd"></div>
+				</a></div>
+			<div class="jiti6"><a href="">
+					<div class="gr6"></div>
+					<p></p>
+					<div class="gd"></div>
+				</a></div>
+			<div class="jiti7"><a href="">
+					<div class="gr7"></div>
+					<p></p>
+					<div class="gd"></div>
+				</a></div>
+			<div class="jiti8"><a href="">
+					<div class="gr8"></div>
+					<p></p>
+					<div class="gd"></div>
+				</a></div>
+		</div>
+		<!--用户栏-->
+	</div>
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+    window.onload=function(){
+        resize(1334,"y"); 
+    }
+</script>
+</html>

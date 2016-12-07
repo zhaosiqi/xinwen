@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <!--<script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    </script>-->
+    <style>
+      body,html{
+      	width: 100%;height:100%;padding: 0;
+      	margin: 0;
+       }
+      *{
+      	padding: 0;
+      	margin: 0;
+      	box-sizing: border-box;
+      }
+	.box{
+		width:100%;
+		height: auto;
+	}
+	nav{
+		width: 100%;
+		height:1.2rem;
+		background: #333;
+		position:fixed;
+		bottom:0;
+		left: 0;
+	}
+	nav .nav{
+		float: left;
+		width: 20%;
+		height:100%;
+		position: relative;
+	}
+	/*.nav:nth-child(1){
+		position: relative;
+	}*/
+	.shouye{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/1.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.fenlei{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/2.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.sousuo{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/3.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.faxian{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/4.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.yonghu{
+		width: 0.8rem;
+		height: 0.8rem;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin: auto;
+		background:url(img/5.svg)no-repeat;
+		background-size: 100% 100%;
+	}
+	.swiper-container{
+		width: 100%;
+		height:3.87rem;
+	}
+	.swiper-slide:nth-child(1){
+		background: url(img/banner1.jpg);
+		background-size:100% 100%;
+		position: relative;
+	}
+	.swiper-slide:nth-child(2){
+		background: url(img/banner2.jpg);
+		background-size:100% 100%;
+		position: relative;
+	}
+	.swiper-slide:nth-child(3){
+		background: url(img/banner3.jpg);
+		background-size:100% 100%;
+		position: relative;
+	}
+	.one{
+		width: 100%;
+		height:0.8rem;
+		position: absolute;
+		bottom:0.6rem;
+	}
+	.one a{
+		width: 100%;
+		height: 100%;
+		display: block;
+		text-align: center;
+		color: #fff;
+		font-size: 0.4rem;
+		text-decoration: none;
+		font-family: "微软雅黑";
+	}
+	.category{
+		width: 100%;
+		height:4rem;
+	}
+	.top{
+		width: 100%;
+		height:0.8rem;
+	}
+	.dome{
+		width: 100%;
+		height: 3.2rem;
+	}
+	.tople1{
+		float: left;
+		width: 75%;
+		height:100%;
+		background: url(img/0003.png);
+		background-size: 100% 100%;
+	}
+	.tople2{
+		float: left;
+		width: 75%;
+		height:100%;
+		background: url(img/0001.png);
+		background-size: 100% 100%;
+	}
+	.tople3{
+		float: left;
+		width: 75%;
+		height:100%;
+		background: url(img/0002.png);
+		background-size: 100% 100%;
+	}
+	.tople4{
+		float: left;
+		width: 75%;
+		height:100%;
+		background: url(img/0004.png);
+		background-size: 100% 100%;
+	}
+	.tople5{
+		float: left;
+		width: 75%;
+		height:100%;
+		background: url(img/0005.png);
+		background-size: 100% 100%;
+	}
+	.topri{
+		float: left;
+		width: 25%;
+		height: 100%;
+	}
+	.topri a{
+		text-decoration: none;
+		width: 100%;
+		height:100%;
+		display: block;
+		color: #000;
+		font-size: 0.3rem;
+		line-height:0.8rem;
+		text-align: center;
+		font-family: "微软雅黑";
+	}
+	.topri a:hover{
+		color: red;
+	}
+	.dome .son{
+		width: 100%;
+		height:20%;
+		/*border-bottom: 1px dashed #000;*/
+	}
+	.son a{
+		width: 75%;
+		height:100%;
+		display: block;
+		float: left;
+		text-decoration: none;
+		color: #333333;
+		font-size: 0.3rem;
+		text-align: center;
+		line-height:0.64rem;
+		font-family: "微软雅黑";
+		font-weight: bold;
+		overflow: hidden;
+	}
+	.sons{
+		width: 25%;
+		height:100%;
+		float: left;
+	}
+	.sons p{
+		float:left;
+		font-size: 0.2rem;
+		line-height: 0.84rem;
+		padding: 0;
+		margin: 0;
+		color: #63B8FF;
+	}
+	/*.son p:nth-child(1){
+		margin-left: 0.1rem;
+	}*/
+	.son p:nth-child(2){
+		margin-left: 0.1rem;
+	}
+	.liubai{
+		width: 100%;
+		height: 1.2rem;
+	}
+    </style>
+</head>
+<body>
+	<div class="box">
+		<!--标题栏-->
+		<nav>
+			<div class="nav">
+				<a href="shouye.html">
+					<div class="shouye"></div>
+				</a>
+			</div>
+			<div class="nav">
+				<a href="fenlei.html">
+					<div class="fenlei"></div>
+				</a></div>
+			<div class="nav">
+				<a href="ss.html">
+					<div class="sousuo"></div>
+				</a></div>
+			<div class="nav">
+				<a href="faxian.html">
+					<div class="faxian"></div>
+				</a>
+			</div>
+			<div class="nav">
+				<a href="guide.html">
+					<div class="yonghu"></div>
+				</a>
+			</div>
+		</nav>
+		<!--标题栏-->
+		<!--banner-->
+		<div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    	<div class="one">
+                    		<a href="">IS点燃油井 伊拉克摩苏尔黑烟蔽日</a>
+                    	</div>
+                    </div>
+                    <div class="swiper-slide">
+                    	<div class="one">
+                    		<a href="">歼15飞行员数量增长神速，原来是从海空军“割韭菜”</a>
+                    	</div>
+                    </div>
+                    <div class="swiper-slide">
+                    	<div class="one">
+                    		<a href="">聂树斌父母感叹正义来得迟 焚烧判决书祭奠</a>
+                    	</div>
+                    </div>
+                </div>
+        </div>
+        <!--banner-->
+        <!--具体-->
+        <div class="category">
+        	<div class="top">
+        		<div class="tople1"></div>
+        		<div class="topri">
+        			<a href="">查看更多</a>
+        		</div>
+        	</div>
+        	<div class="dome">
+        		<div class="son">
+        			<a href="">习近平：弘扬宪法精神推动宪法实施</a>
+        			<div class="sons">
+        				<p>国内</p>
+        				<p>16/11/13</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">女子ATM上没插卡 取款机却疯狂吐钱…</a>
+        			<div class="sons">
+        				<p>国内</p>
+        				<p>16/11/13</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">奇葩！陕西最牛车主用鱼遮挡号牌</a>
+        		    <div class="sons">
+        		    	<p>国内</p>
+        				<p>16/11/13</p>
+        		    </div>
+        		</div>
+        		<div class="son">
+        			<a href="">女大学生未婚产子 把男婴弃于小区绿化带上</a>
+        			<div class="sons">
+        				<p>国内</p>
+        				<p>16/11/13</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">暖心！青岛高校学生无偿献血排队到天黑</a>
+        			<div class="sons">
+        			    <p>国内</p>
+        				<p>16/11/13</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="category">
+        	<div class="top">
+        		<div class="tople2"></div>
+        		<div class="topri">
+        			<a href="">查看更多</a>
+        		</div>
+        	</div>
+        	<div class="dome">
+        		<div class="son">
+        			<a href="">2017年春运1月13日开始 系5年来最早</a>
+        			<div class="sons">
+        				<p>国内</p>
+        				<p>16/12/13</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">我国多地遭遇持续雾霾侵扰 纷纷发布应急预警</a>
+        			<div class="sons">
+        				<p>国内</p>
+        				<p>16/12/04</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">北京下周一北风吹散雾霾 蓝天重现</a>
+        		    <div class="sons">
+        		    	<p>国内</p>
+        				<p>16/12/04</p>
+        		    </div>
+        		</div>
+        		<div class="son">
+        			<a href="">开国大将夫妇去世 房子该给谁？</a>
+        			<div class="sons">
+        				<p>国内</p>
+        				<p>16/12/05</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">一图看懂罗尔卖文救女事件是如何反转的</a>
+        			<div class="sons">
+        			    <p>国内</p>
+        				<p>16/11/13</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="category">
+        	<div class="top">
+        		<div class="tople3"></div>
+        		<div class="topri">
+        			<a href="">查看更多</a>
+        		</div>
+        	</div>
+        	<div class="dome">
+        		<div class="son">
+        			<a href="">金正恩携妻观看飞行大赛</a>
+        			<div class="sons">
+        				<p>国际</p>
+        				<p>16/11/15</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">印尼失联运输机确认坠毁 机上载有10余人</a>
+        			<div class="sons">
+        				<p>国际</p>
+        				<p>16/12/16</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">俄外长：解决俄日和平条约问题并非易事</a>
+        		    <div class="sons">
+        		    	<p>国际</p>
+        				<p>16/12/15</p>
+        		    </div>
+        		</div>
+        		<div class="son">
+        			<a href="">新西兰南岛北部发生5.5级地震 尚无人员伤亡</a>
+        			<div class="sons">
+        				<p>国际</p>
+        				<p>16/12/02</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">意大利今日将修宪公投 民众忧民主制度削弱</a>
+        			<div class="sons">
+        			    <p>国际</p>
+        				<p>16/12/13</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="category">
+        	<div class="top">
+        		<div class="tople4"></div>
+        		<div class="topri">
+        			<a href="">查看更多</a>
+        		</div>
+        	</div>
+        	<div class="dome">
+        		<div class="son">
+        			<a href="">黄晓明抵台赚奶粉钱 Baby挺孕肚相随</a>
+        			<div class="sons">
+        				<p>娱乐</p>
+        				<p>16/12/19</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">蔡依林与半裸男共舞 猛男表情亮了</a>
+        			<div class="sons">
+        				<p>娱乐</p>
+        				<p>16/12/04</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">网瘾少年一枚！林俊杰网吧专注打游戏</a>
+        		    <div class="sons">
+        		    	<p>娱乐</p>
+        				<p>16/12/02</p>
+        		    </div>
+        		</div>
+        		<div class="son">
+        			<a href="">过去了17年张柏芝美貌依旧 可嗓音却暴露了年龄</a>
+        			<div class="sons">
+        				<p>娱乐</p>
+        				<p>16/12/07</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">《青云志2》8日回归 李易峰变鬼厉赵丽颖复活</a>
+        			<div class="sons">
+        			    <p>娱乐</p>
+        				<p>16/12/06</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="category">
+        	<div class="top">
+        		<div class="tople5"></div>
+        		<div class="topri">
+        			<a href="">查看更多</a>
+        		</div>
+        	</div>
+        	<div class="dome">
+        		<div class="son">
+        			<a href="">美称中国同时射十枚东风21示威特朗普</a>
+        			<div class="sons">
+        				<p>军事</p>
+        				<p>16/12/17</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">专家称轰20隐身超音速只能二选一 B2太贵或学B1</a>
+        			<div class="sons">
+        				<p>军事</p>
+        				<p>16/12/21</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">翼龙无人机要上航母，起降问题怎么解决？</a>
+        		    <div class="sons">
+        		    	<p>军事</p>
+        				<p>16/12/18</p>
+        		    </div>
+        		</div>
+        		<div class="son">
+        			<a href="">越军参观印国产航母 折腾几年没啥变化</a>
+        			<div class="sons">
+        				<p>军事</p>
+        				<p>16/12/03</p>
+        			</div>
+        		</div>
+        		<div class="son">
+        			<a href="">家底全亮出来：金正恩指导朝鲜炮兵演习</a>
+        			<div class="sons">
+        			    <p>军事</p>
+        				<p>16/12/08</p>
+        			</div>
+        		</div>
+        	</div>
+        </div>	
+        <!--具体-->
+        <div class="liubai"></div>
+    </div>
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y"); 
+   }
+  
+  var mySwiper = new Swiper('.swiper-container',{
+  })
+</script>
+</html>
